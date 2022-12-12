@@ -7,8 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="227" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="160"/>
-        <TextBlock HorizontalAlignment="Left" Height="227" Margin="630,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="160"/>
+        <TextBox Name="txt1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231" Height="342"/>
+        <TextBox Name="txt2" HorizontalAlignment="Left" Margin="509,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" Height="342"/>
+        <Button x:Name="L" Content="Level Up" HorizontalAlignment="Left" Height="55" Margin="93,363,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_1"/>
+        <Button x:Name="Atak1" Content="Útok" HorizontalAlignment="Left" Height="55" Margin="10,363,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_2"/>
+        <Button x:Name="Atak2" Content="Útok" HorizontalAlignment="Left" Height="54" Margin="662,364,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_3" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Heal" HorizontalAlignment="Left" Height="54" Margin="178,364,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_4"/>
+        <Button Content="Heal" HorizontalAlignment="Left" Height="54" Margin="577,364,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_5"/>
+        <Button Content="Level Up" HorizontalAlignment="Left" Height="54" Margin="509,364,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_7"/>
 
     </Grid>
 </Window>
