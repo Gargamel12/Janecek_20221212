@@ -107,7 +107,7 @@ namespace janecek_20221212
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            soldier1.Heals();
+            soldier1.Heal();
             Zobraz(soldier1, txt1);
 
 
