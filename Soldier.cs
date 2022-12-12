@@ -60,7 +60,7 @@ namespace Janecek_20221212
         {
             if (Zivot > 0)
             {
-                Zivpt +=
+             Zivot +=5;
             }
 
         }
