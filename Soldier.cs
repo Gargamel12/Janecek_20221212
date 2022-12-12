@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Janecek_20221212
+namespace janecek_20221212
 {
     public class Soldier
     {
