@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="L" Content="Level Up" HorizontalAlignment="Left" Height="55" Margin="93,363,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_1"/>
+        <Button x:Name="Lvl1" Content="Level Up" HorizontalAlignment="Left" Height="55" Margin="93,363,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_1"/>
         <Button x:Name="Atak1" Content="Útok" HorizontalAlignment="Left" Height="55" Margin="10,363,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_2"/>
         <Button x:Name="Atak2" Content="Útok" HorizontalAlignment="Left" Height="54" Margin="662,364,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_3" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
@@ -19,11 +19,11 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Heal" HorizontalAlignment="Left" Height="54" Margin="178,364,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_4"/>
-        <Button Content="Heal" HorizontalAlignment="Left" Height="54" Margin="577,364,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_5"/>
-        <Button Content="Level Up" HorizontalAlignment="Left" Height="54" Margin="509,364,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_7"/>
-        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="300" Margin="24,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
-        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="300" Margin="508,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
+        <Button x:Name="Heal1" Content="Heal" HorizontalAlignment="Left" Height="54" Margin="178,364,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_4"/>
+        <Button x:Name="Heal2" Content="Heal" HorizontalAlignment="Left" Height="54" Margin="577,364,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click_5"/>
+        <Button x:Name="Lvl2" Content="Level Up" HorizontalAlignment="Left" Height="54" Margin="509,364,0,0" VerticalAlignment="Top" Width="63" Click="Button_Click_7"/>
+        <TextBox Name="txt1" HorizontalAlignment="Left" Height="300" Margin="24,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217"/>
+        <TextBox Name="txt2" HorizontalAlignment="Left" Height="300" Margin="508,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218"/>
 
     </Grid>
 </Window>

@@ -47,26 +47,11 @@ namespace janecek_20221212
             textBox.Text += "Volné healy: " + soldier.Heals.ToString() + "\n";
             textBox.Text += "DMG: " + soldier.Dmg.ToString() + "\n";
         }
-        public void dead(Soldier clovek, TextBox textbox)
+        public void dead(Soldier soldier, TextBox textbox)
         {
-            textbox.Text = clovek.Jmeno + " je mrtev";
+            textbox.Text = soldier.Jmeno + " je mrtev";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            soldier1.PosunoutCas();
-            soldier2.PosunoutCas();
-            Zobraz(soldier1, txt1);
-            Zobraz(soldier2, txt2);
-            if (soldier1.Zivot <= 0)
-            {
-                dead(soldier1, txt1);
-            }
-            if (soldier2.Zivot <= 0)
-            {
-                dead(soldier2, txt2);
-            }
-        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -86,7 +71,6 @@ namespace janecek_20221212
         {
             soldier2.Attack();
             Zobraz(soldier2, txt2);
-            soldier1.Enerzy();
             Zobraz(soldier1, txt1);
             if (soldier1.Zivot <= 0)
             {
@@ -106,7 +90,6 @@ namespace janecek_20221212
         {
             soldier1.Attack();
             Zobraz(soldier1, txt1);
-            soldier2.Enerzy();
             Zobraz(soldier2, txt2);
             if (soldier2.Zivot <= 0)
             {
@@ -124,7 +107,7 @@ namespace janecek_20221212
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            soldier1.Heal();
+            soldier1.Heals();
             Zobraz(soldier1, txt1);
 
 
@@ -142,7 +125,7 @@ namespace janecek_20221212
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            soldier2.Drink();
+            soldier2.Heal();
             Zobraz(soldier2, txt2);
             if (soldier1.Zivot <= 0)
             {

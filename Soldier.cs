@@ -8,14 +8,14 @@ namespace Janecek_20221212
 {
     public class Soldier
     {
-        // soukromé proměnné - nejsou dostupné mimo třídu Clovek
+    
         private int energie;
         private int dovednost;
         private int heals;
         private int momentalnienerzy;
         private int dmg;
 
-        // vlastnosti - zveřejňují hodnoty ven z třídy
+        
         public string Jmeno { get; set; }
         public int Zivot { get; set; }
         public int MaxZivot { get; set; }
@@ -26,15 +26,17 @@ namespace Janecek_20221212
         public int Dmg { get => dmg; }
 
 
-        //konstruktor - pomocí této metody vznikne konkrétní objekt - instance třídy
+        
         public Soldier()
         {
             Jmeno = "";
             Zivot = 100;
+            MaxZivot = 100;
             Shield = 100;
+            MaxShield= 100;
             dovednost = 0;
             heals = 5;
-            dmg = 0;
+            dmg = 1;
         }
 
 
@@ -45,6 +47,10 @@ namespace Janecek_20221212
             MaxZivot += 10;
             dovednost += 1;
             dmg += 10;
+            if (Shield < 100)
+            {
+                Shield = MaxShield;
+            }
         }
         public void Attack()
         {
@@ -56,11 +62,11 @@ namespace Janecek_20221212
         }
 
         }
-        public void Heals()
+        public void Heal()
         {
             if (Zivot > 0)
             {
-             Zivot +=5;
+              Zivot +=50;
             }
 
         }
