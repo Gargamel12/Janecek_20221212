@@ -24,9 +24,10 @@ namespace Janecek_20221212
         public int Dovednost { get => dovednost; }
         public int Heals { get => heals; }
         public int Dmg { get => dmg; }
+        public int Level { get; set; }
 
 
-        
+
         public Soldier()
         {
             Jmeno = "";
@@ -37,6 +38,7 @@ namespace Janecek_20221212
             dovednost = 0;
             heals = 5;
             dmg = 1;
+            Level = 1;
         }
 
 
