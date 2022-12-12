@@ -20,7 +20,8 @@ namespace janecek_20221212
     /// </summary>
     public partial class MainWindow : Window
     {
-        Soldier
+        Soldier soldier2;
+        Soldier soldier2;
 
         public MainWindow()
         {
