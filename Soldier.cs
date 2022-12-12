@@ -11,109 +11,57 @@ namespace Janecek_20221212
         // soukromé proměnné - nejsou dostupné mimo třídu Clovek
         private int energie;
         private int dovednost;
-        private int drinks;
+        private int heals;
         private int momentalnienerzy;
         private int dmg;
 
         // vlastnosti - zveřejňují hodnoty ven z třídy
         public string Jmeno { get; set; }
-        public string Prijmeni { get; set; }
-        public DateTime DatumNarozeni { get; set; }
-        public int Energie { get => energie; }
         public int Zivot { get; set; }
+        public int MaxZivot { get; set; }
+        public int Shield { get; set; }
+        public int MaxShield { get; set; }
         public int Dovednost { get => dovednost; }
-        public int Drinks { get => drinks; }
+        public int Heals { get => heals; }
         public int Dmg { get => dmg; }
 
 
         //konstruktor - pomocí této metody vznikne konkrétní objekt - instance třídy
-        public Clovek()
+        public Soldier()
         {
             Jmeno = "";
-            Prijmeni = "";
-            DatumNarozeni = DateTime.Now;
-            energie = 100;
             Zivot = 100;
+            Shield = 100;
             dovednost = 0;
-            drinks = 5;
+            heals = 5;
             dmg = 0;
         }
 
 
-        public void PosunoutCas()
-        {
-            energie += 20;
-            Zivot += 5;
-        }
 
         public void ZvysitDovednost()
         {
-            Zivot += 20;
-            dovednost += 10;
-            energie += 10;
+            Zivot += 30;
+            MaxZivot += 10;
+            dovednost += 1;
             dmg += 10;
         }
         public void Attack()
         {
-            if (energie < 0)
-            {
-                Zivot -= 0;
-            }
-            else if (energie > 0)
-            {
-                Zivot -= 10;
+            { 
                 Zivot -= Dmg;
             }
-            else if (energie < 0)
-            {
-                Zivot = 0;
-            }
-            else if (Zivot <= 0)
-            {
-                Zivot -= 0;
-            }
+            
 
         }
-        public void Enerzy()
-        {
-            energie -= 20;
-            if (energie < 0)
-            {
-                energie = 0;
-                Zivot -= 5;
-            }
-            else if (Zivot <= 0)
-            {
-                Zivot -= 0;
-            }
 
         }
-        public void Drink()
+        public void Heals()
         {
             if (Zivot > 0)
             {
-                momentalnienerzy = energie;
-                if (energie > 100)
-                {
-                    energie = 100;
-
-                }
-                if (drinks <= 0)
-                {
-                    energie = momentalnienerzy;
-                    drinks = 0;
-                }
-                if (energie < 100)
-                {
-                    energie += 50;
-                    drinks -= 1;
-                }
+                Zivpt +=
             }
-            else
-            {
-                energie = -0;
-            }
-
 
         }
     }

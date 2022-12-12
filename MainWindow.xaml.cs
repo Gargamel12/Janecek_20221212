@@ -36,6 +36,8 @@ namespace janecek_20221212
             Zobraz(soldier2, txt2);
         }
 
+       
+
         public void Zobraz(Soldier soldier, TextBox textBox)
         {
             textBox.Text = soldier.Jmeno + "\n";
@@ -140,15 +142,15 @@ namespace janecek_20221212
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            jan.Drink();
-            Zobraz(jan, txt2);
-            if (karel.Zivot <= 0)
+            soldier2.Drink();
+            Zobraz(soldier2, txt2);
+            if (soldier1.Zivot <= 0)
             {
-                dead(karel, txt1);
+                dead(soldier1, txt1);
             }
-            if (jan.Zivot <= 0)
+            if (soldier2.Zivot <= 0)
             {
-                dead(jan, txt2);
+                dead(soldier2, txt2);
             }
         }
 
@@ -160,15 +162,15 @@ namespace janecek_20221212
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            jan.ZvysitDovednost();
-            Zobraz(jan, txt2);
-            if (jan.Zivot <= 0)
+            soldier2.ZvysitDovednost();
+            Zobraz(soldier2, txt2);
+            if (soldier2.Zivot <= 0)
             {
-                dead(jan, txt2);
+                dead(soldier2, txt2);
             }
-            if (karel.Zivot <= 0)
+            if (soldier1.Zivot <= 0)
             {
-                dead(karel, txt1);
+                dead(soldier1, txt1);
             }
         }
     }
