@@ -27,6 +27,8 @@ namespace janecek_20221212
         {
             InitializeComponent();
 
+            Random rand = new Random();
+
             soldier1 = new Soldier();
             soldier1.Jmeno = "Soldier 76";
             Zobraz(soldier1, txt1);
@@ -42,7 +44,9 @@ namespace janecek_20221212
         {
             textBox.Text = soldier.Jmeno + "\n";
             textBox.Text += "Život: " + soldier.Zivot.ToString() + "\n";
-            textBox.Text += "MaxHP:" + soldier.MaxHP.ToString() + "/n"; 
+            textBox.Text += "MaxHP:" + soldier.MaxZivot.ToString() + "\n";
+            textBox.Text += "Shield:" + soldier.Shield.ToString() + "\n";
+            textBox.Text += "MaxShield:" + soldier.MaxShield.ToString() + "\n";
             textBox.Text += "Dovednost: " + soldier.Dovednost.ToString() + "\n";
             textBox.Text += "Volné healy: " + soldier.Heals.ToString() + "\n";
             textBox.Text += "DMG: " + soldier.Dmg.ToString() + "\n";

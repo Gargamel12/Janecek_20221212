@@ -9,10 +9,8 @@ namespace janecek_20221212
     public class Soldier
     {
     
-        private int energie;
         private int dovednost;
         private int heals;
-        private int momentalnienerzy;
         private int dmg;
 
         
@@ -30,6 +28,8 @@ namespace janecek_20221212
 
         public Soldier()
         {
+            Random rand = new Random();
+
             Jmeno = "";
             Zivot = 100;
             MaxZivot = 100;
@@ -37,7 +37,7 @@ namespace janecek_20221212
             MaxShield= 100;
             dovednost = 0;
             heals = 5;
-            dmg = 1;
+            dmg = rand.Next(30, 58);
             Level = 1;
         }
 
@@ -56,14 +56,39 @@ namespace janecek_20221212
         }
         public void Attack()
         {
-            { 
-                Zivot -= Dmg;
+            if (Shield > 0 && Level ==1)
+            {
+                Shield -= dmg; 
             }
-            
+            else if (Shield > 0 && Level == 2)
+            {
+                Shield -= dmg -10;
+            }
+            else if (Shield <= 0 && Level == 1)
+            {
+               Zivot -= dmg ;
+            }
+            else if (Shield <= 0 && Level == 2)
+            {
+                Zivot -= dmg - 10;
+            }
+            else if (Shield <= 0 && Level == 3)
+            {
+                Zivot -= dmg  - 20;
+            }
+            else if (Shield <= 0 && Level == 3)
+            {
+                Zivot -= dmg - 20;
+            }
+            else if (Shield <= 0 && Level == 4)
+            {
+                Zivot -= dmg - 30;
+            }
+
 
         }
 
-        }
+        
         public void Heal()
         {
             if (Zivot > 0)
