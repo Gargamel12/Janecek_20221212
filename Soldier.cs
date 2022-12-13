@@ -48,8 +48,7 @@ namespace janecek_20221212
             Zivot += 30;
             MaxZivot += 10;
             dovednost += 1;
-            dmg += 10;
-            if (Shield < 100)
+            if (Shield < MaxShield)
             {
                 Shield = MaxShield;
             }
@@ -64,6 +63,19 @@ namespace janecek_20221212
             {
                 Shield -= dmg -10;
             }
+            else if (Shield > 0 && Level == 3)
+            {
+                Shield -= dmg - 20;
+            }
+            else if (Shield > 0 && Level == 4)
+            {
+                Shield -= dmg - 30;
+                
+            }
+            else if (Shield > 0 && Level == 5)
+                {
+                    Shield -= dmg - 40;
+                }
             else if (Shield <= 0 && Level == 1)
             {
                Zivot -= dmg ;
@@ -76,15 +88,14 @@ namespace janecek_20221212
             {
                 Zivot -= dmg  - 20;
             }
-            else if (Shield <= 0 && Level == 3)
-            {
-                Zivot -= dmg - 20;
-            }
             else if (Shield <= 0 && Level == 4)
             {
                 Zivot -= dmg - 30;
             }
-
+            else if (Shield <= 0 && Level == 5)
+            {
+                Zivot -= dmg - 40;
+            }
 
         }
 
