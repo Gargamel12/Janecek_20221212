@@ -31,10 +31,10 @@ namespace janecek_20221212
             Random rand = new Random();
 
             Jmeno = "";
-            Zivot = 100;
-            MaxZivot = 100;
-            Shield = 100;
-            MaxShield= 100;
+            Zivot = 400;
+            MaxZivot = 400;
+            Shield = 200;
+            MaxShield= 200;
             dovednost = 0;
             heals = 5;
             dmg = rand.Next(30, 58);
@@ -45,66 +45,94 @@ namespace janecek_20221212
 
         public void ZvysitDovednost()
         {
+            
             Zivot += 30;
             MaxZivot += 10;
             dovednost += 1;
-            if (Shield < MaxShield)
+            if (Shield > MaxShield)
             {
                 Shield = MaxShield;
+            }
+            if (Zivot > MaxZivot)
+            {
+                Zivot = MaxZivot;
             }
         }
         public void Attack()
         {
-            if (Shield > 0 && Level ==1)
+            if(Shield>=0)
             {
+              if (Shield > 0 && Level ==1)
+              {
                 Shield -= dmg; 
+              }
+              else if (Shield > 0 && Level == 2)
+              {
+                  Shield -= dmg -10;
+              }
+              else if (Shield > 0 && Level == 3)
+              {
+                  Shield -= dmg - 20;
+              }
+              else if (Shield > 0 && Level == 4)
+              {
+                  Shield -= dmg - 30;
+                  
+              }
+              else if (Shield > 0 && Level == 5)
+                  {
+                      Shield -= dmg - 40;
+                  }
+              else if (Shield <= 0 && Level == 1)
+              {
+                 Zivot -= dmg ;
+              }
+              else if (Shield <= 0 && Level == 2)
+              {
+                  Zivot -= dmg - 10;
+              }
+              else if (Shield <= 0 && Level == 3)
+              {
+                  Zivot -= dmg  - 20;
+              }
+              else if (Shield <= 0 && Level == 4)
+              {
+                  Zivot -= dmg - 30;
+              }
+              else if (Shield <= 0 && Level == 5)
+              {
+                  Zivot -= dmg - 40;
+              }
             }
-            else if (Shield > 0 && Level == 2)
+            else
             {
-                Shield -= dmg -10;
+                Shield = 0;
             }
-            else if (Shield > 0 && Level == 3)
-            {
-                Shield -= dmg - 20;
-            }
-            else if (Shield > 0 && Level == 4)
-            {
-                Shield -= dmg - 30;
-                
-            }
-            else if (Shield > 0 && Level == 5)
-                {
-                    Shield -= dmg - 40;
-                }
-            else if (Shield <= 0 && Level == 1)
-            {
-               Zivot -= dmg ;
-            }
-            else if (Shield <= 0 && Level == 2)
-            {
-                Zivot -= dmg - 10;
-            }
-            else if (Shield <= 0 && Level == 3)
-            {
-                Zivot -= dmg  - 20;
-            }
-            else if (Shield <= 0 && Level == 4)
-            {
-                Zivot -= dmg - 30;
-            }
-            else if (Shield <= 0 && Level == 5)
-            {
-                Zivot -= dmg - 40;
-            }
+            
+            
 
         }
 
         
         public void Heal()
         {
-            if (Zivot > 0)
+            if (heals <= 0)
             {
-              Zivot +=50;
+                heals = 0;
+            }
+            else
+            {
+                heals--;
+            }
+            
+            if (Zivot > 0 )
+            {
+                Zivot += 70;
+                if (Zivot > MaxZivot)
+                {
+                    Zivot = MaxZivot;
+                }
+
             }
 
         }
